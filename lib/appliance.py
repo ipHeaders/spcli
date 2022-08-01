@@ -1,5 +1,6 @@
 from pyedgeconnect import Orchestrator
-from .BaseConnection import BaseConnection,create_dict, print_dict, print_list,tablefmt,create_dict_from_list
+from .BaseConnection import BaseConnection,create_dict,create_dict_from_list,tablefmt
+from .BaseConnection import print_dict,print_list
 from tabulate import tabulate
 
 class APPLIANCE(BaseConnection):
