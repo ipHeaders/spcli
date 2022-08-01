@@ -99,7 +99,21 @@ def parser():
                                   metavar='',
                                   nargs=1,
                                   #action='store_true',
-                                  help="configured message of the day (motd) and issue banners for Edge Connect appliance, must pass [id]")
+                                  help="returns BGP configuration, must pass [id]")
+
+    bgp_parser.add_argument('-neighbors',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="BGP neighbor configuration, must pass [id]")
+
+    bgp_parser.add_argument('-summary',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="appliance BGP neighbors current state, must pass [id]")
 
 
     options = parser.parse_args()

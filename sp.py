@@ -31,7 +31,14 @@ def main():
         lib.appliance.APPLIANCE()._get_appliance_login_banners(options)
     elif (options.args == "appliance"):
         lib.appliance.APPLIANCE()._get_appliances(options)
-    
+#########################################################################################    
+    elif (options.args == "bgp" and options.config != None):
+        lib.bgp.BGP()._get_appliance_bgp_config(options)
+    elif (options.args == "bgp" and options.neighbors != None):
+        lib.bgp.BGP()._get_appliance_bgp_neighbors(options)
+    elif (options.args == "bgp" and options.summary != None):
+        lib.bgp.BGP()._get_appliance_bgp_state(options)
+
 
 
 if __name__ == "__main__":
