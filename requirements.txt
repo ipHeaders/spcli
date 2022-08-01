@@ -1,0 +1,2 @@
+pyedgeconnect
+PyYAML==6.0

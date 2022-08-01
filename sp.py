@@ -1,35 +1,38 @@
 
-import argparse
+import lib
 
-parser = argparse.ArgumentParser()
-parent_parser = argparse.ArgumentParser(add_help=False)
-subparsers = parser.add_subparsers(title='subcommands', dest='action')
+def main():
+
+    options = lib.parser.parser()
+
+    if (options.debug == True):
+        print('debuging...options...',options)
+
+    if (options.args == "orch" and options.allowedip == True):
+        lib.orch.ORCH()._get_ipAllowList()
+    elif (options.args == "orch" and options.users == True):
+        lib.orch.ORCH()._get_get_all_users()
+    elif (options.args == "orch" and options.info == True):
+        lib.orch.ORCH()._get_orchestrator_server_info()
+    elif (options.args == "orch" and options.sessions == True):
+        lib.orch.ORCH()._get_orchestrator_sessions()
+    elif (options.args == "orch" and options.backup == True):
+        lib.orch.ORCH()._get_orchestrator_backup_config()
+    elif (options.args == "orch" and options.info == False):
+        lib.orch.ORCH()._get_orchestrator_server_brief()
+#########################################################################################
+    elif (options.args == "appliance" and options.info != None):
+        lib.appliance.APPLIANCE()._get_appliance_info(options)
+    elif (options.args == "appliance" and options.stat_config == True):
+        lib.appliance.APPLIANCE()._get_appliance_stats_config()
+    elif (options.args == "appliance" and options.os_version != None):
+        lib.appliance.APPLIANCE()._get_appliance_software_version(options)
+    elif (options.args == "appliance" and options.banner != None):
+        lib.appliance.APPLIANCE()._get_appliance_login_banners(options)
+    elif (options.args == "appliance"):
+        lib.appliance.APPLIANCE()._get_appliances(options)
+    
 
 
-add_route_parser = subparsers.add_parser('bgp',
-                                        parents=[parent_parser],
-                                        description="bgp commands",
-                                        help='bgp commands')
-
-add_route_parser.add_argument('-status', #'-status',
-                              #dest="route_domain_name",
-                              required=False,
-                              help="The route domain name to add")
-
-add_route_parser.add_argument('-amount', #'-status',
-                              #dest="route_domain_name",
-                              required=False,
-                              help="The route domain name to add")
-                              
-add_route_parser.add_argument('-stats', #'-stats',
-                              #dest="route_domain_name",
-                              required=False,
-                              help="The route domain name to add")
-
-
-
-
-options = parser.parse_args()
-#print(options)
-
-print(options)
+if __name__ == "__main__":
+    main()
