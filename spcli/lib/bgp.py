@@ -1,6 +1,6 @@
 from pyedgeconnect import Orchestrator
-from .lib.BaseConnection import BaseConnection,create_dict,create_dict_from_list,tablefmt
-from .lib.BaseConnection import print_dict,print_list
+from lib.BaseConnection import BaseConnection,create_dict,create_dict_from_list,tablefmt
+from lib.BaseConnection import print_dict,print_list
 from tabulate import tabulate
 import datetime
 

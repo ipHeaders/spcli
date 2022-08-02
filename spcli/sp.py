@@ -1,4 +1,4 @@
-
+#!python
 import lib
 
 def main():

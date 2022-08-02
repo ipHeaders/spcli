@@ -1,22 +1,25 @@
 import pathlib
+#from distutils.core import setup
 
-from setuptools import find_packages, setup
+from setuptools import find_packages,setup
 
 here = pathlib.Path(__file__).parent.resolve()
 
 setup(
     name="sp",
-    version='0.1',
-    py_modules=['sp'],
-    setup_requires=["setuptools_scm"],
+    version='0.0.5',
+    #py_modules=['sp'],
+    setup_requires=["setuptools"],
     install_requires=[
         "pyedgeconnect",
         "PyYAML==6.0",
         "tabulate==0.8.10"
     ],
-    packages=find_packages(),
-    package_dir={"spcli": "spcli"},
-    zip_safe=False,
+    packages=find_packages(where="spcli"),
+    package_dir={"": "spcli"},
+    package_data={"lib": ["*.py",]},
+
+    #zip_safe=False,
     entry_points='''
         [console_scripts]
         spcli.sp=spcli.sp:main
