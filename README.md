@@ -1,4 +1,4 @@
-# spcli
+# spcli - Silverpeak/Aruba SD-WAN Command Line Interface
 
 ### Description
 This CLI tool is to query the Silverpeal/Aruba SD-WAN orchestrator and output the information in your terminal.
