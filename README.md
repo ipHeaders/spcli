@@ -24,9 +24,8 @@ Once the installation is successful, you will need to create a file with your ap
    * `nano ~/.spcli/creds.yml`
 
 The yml file needs to have the following variables.
-
+**Example:**
 ```
-Example:
 url: silverpeak-orch-use1.silverpeak.cloud
 token: a38b3360bb4d06fed7e53f77c8752d74bb4faeb4295385a25e02ebc2594d9074a16bb115fce4d4dc9826d824950504b6d23373
 ```
