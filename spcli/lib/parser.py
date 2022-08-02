@@ -13,6 +13,11 @@ def parser():
                                   #choices='ec',
                                   action='store_true',
                                   help="debug the cli")
+    parser.add_argument('-v', '--version',
+                                  required=False,
+                                  #choices='ec',
+                                  action='store_true',
+                                  help="shows cli tool version")
 ##############################################################################    
 #                            ORCHESTRATOR COMMANDS
 ##############################################################################

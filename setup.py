@@ -7,13 +7,14 @@ here = pathlib.Path(__file__).parent.resolve()
 
 setup(
     name="sp",
-    version='0.0.5',
+    version='0.0.6',
     py_modules=['sp'],
     setup_requires=["setuptools"],
     install_requires=[
         "pyedgeconnect",
         "PyYAML==6.0",
-        "tabulate==0.8.10"
+        "tabulate==0.8.10",
+        "importlib_metadata",
     ],
     packages=find_packages(where="spcli"),
     package_dir={"": "spcli"},
