@@ -15,11 +15,11 @@ setup(
         "tabulate==0.8.10"
     ],
     packages=find_packages(),
-    package_dir={"lib": "lib"},
+    package_dir={"spcli": "spcli"},
     zip_safe=False,
     entry_points='''
         [console_scripts]
-        sp=sp:main
+        spcli.sp=spcli.sp:main
     ''',
     python_requires=">=3.7, <4",
 )
