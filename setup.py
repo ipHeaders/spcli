@@ -17,6 +17,7 @@ setup(
     ],
     packages=find_packages(where="spcli"),
     package_dir={"": "spcli"},
+    include_package_data=True,
     package_data={"lib": ["*.py",]},
 
     #zip_safe=False,
