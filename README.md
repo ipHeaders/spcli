@@ -14,8 +14,10 @@ To get started, instal the CLI tool using the python3 package manager [pip]
 
 Once the installation is successful, you can check with the following command
 
-`❯ sp -v`
-`version...installed: 0.0.6`
+```
+❯ sp -v
+version...installed: 0.0.6
+```
 
 ### Help Function
 
