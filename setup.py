@@ -23,7 +23,7 @@ setup(
     #zip_safe=False,
     entry_points='''
         [console_scripts]
-        spcli.sp=spcli.sp:main
+        sp=sp:main
     ''',
     python_requires=">=3.7, <4",
 )
