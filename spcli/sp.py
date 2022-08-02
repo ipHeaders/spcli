@@ -1,5 +1,6 @@
-
-import lib as lib
+#!python
+import lib
+import pkg_resources
 
 def main():
 
@@ -7,6 +8,9 @@ def main():
 
     if (options.debug == True):
         print('debuging...options...',options)
+    if (options.version == True):
+        from importlib_metadata import version
+        print(f'version...installed:',version('sp'))
 
     if (options.args == "orch" and options.allowedip == True):
         lib.orch.ORCH()._get_ipAllowList()

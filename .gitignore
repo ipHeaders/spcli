@@ -1,3 +1,4 @@
 sp.egg-info
 __pycache__
 .eggs/
+spcli/__pycache__
