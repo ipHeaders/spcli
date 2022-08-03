@@ -9,7 +9,7 @@ on:
     types: [opened, reopened,edited]
 
 jobs:
-  lint:
+  pip:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,5 +18,4 @@ jobs:
       with:
         requirements: requirements.txt
         upgrade: true
-        editable: editable
     - run: python main.py# <-- only one value is allowed
