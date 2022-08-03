@@ -1,4 +1,4 @@
-name: Lint
+name: Pip
 
 on:
   push:
@@ -18,4 +18,4 @@ jobs:
       with:
         requirements: requirements.txt
         upgrade: true
-    - run: python main.py# <-- only one value is allowed
+    - run: sp -v
