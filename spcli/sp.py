@@ -44,8 +44,10 @@ def main():
         lib.bgp.BGP()._get_appliance_bgp_neighbors(options)
     elif (options.args == "bgp" and options.summary != None):
         lib.bgp.BGP()._get_appliance_bgp_state(options)
-
-
-
+#########################################################################################  
+    elif (options.args == "flows" and options.active == True):
+        lib.flows.FLOWS()._get_appliance_flows_active(options)
+    elif (options.args == "flows" and options.inactive == True):
+        lib.flows.FLOWS()._get_appliance_flows_inactive(options)
 if __name__ == "__main__":
     main()
