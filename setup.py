@@ -7,7 +7,7 @@ here = pathlib.Path(__file__).parent.resolve()
 
 setup(
     name="sp",
-    version='0.0.6',
+    version='0.0.7',
     py_modules=['sp'],
     setup_requires=["setuptools"],
     install_requires=[
