@@ -36,6 +36,18 @@ After the file is created and saved, please verify the cli tool version using th
 version...installed: 0.0.6
 ```
 
+###### Possible Errors
+If you receive an error saying "Command not found" make sure to add the location where the package is installed to your $PATH
+
+Possible error
+```
+WARNING: The script sp is installed in '/Users/John/Library/Python/3.8/bin' which is not on PATH.
+```
+
+Fix
+```
+export PATH="$PATH:/Users/John/Library/Python/3.8/bin"
+```
 ### Help Function
 
 To check possible commands, use the `-h` flag after a command. for example.
