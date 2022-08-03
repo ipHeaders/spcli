@@ -33,6 +33,8 @@ def main():
         lib.appliance.APPLIANCE()._get_appliance_software_version(options)
     elif (options.args == "appliance" and options.banner != None):
         lib.appliance.APPLIANCE()._get_appliance_login_banners(options)
+    elif (options.args == "appliance" and options.dns != None):
+        lib.appliance.APPLIANCE()._get_appliance_dns(options)
     elif (options.args == "appliance"):
         lib.appliance.APPLIANCE()._get_appliances(options)
 #########################################################################################    
@@ -42,8 +44,10 @@ def main():
         lib.bgp.BGP()._get_appliance_bgp_neighbors(options)
     elif (options.args == "bgp" and options.summary != None):
         lib.bgp.BGP()._get_appliance_bgp_state(options)
-
-
-
+#########################################################################################  
+    elif (options.args == "flows" and options.active == True):
+        lib.flows.FLOWS()._get_appliance_flows_active(options)
+    elif (options.args == "flows" and options.inactive == True):
+        lib.flows.FLOWS()._get_appliance_flows_inactive(options)
 if __name__ == "__main__":
     main()

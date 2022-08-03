@@ -1,5 +1,6 @@
 import argparse
 
+
 def parser():
     parser = argparse.ArgumentParser()
     parent_parser = argparse.ArgumentParser(add_help=False)
@@ -91,6 +92,13 @@ def parser():
                                   nargs=1,
                                   #action='store_true',
                                   help="configured message of the day (motd) and issue banners for Edge Connect appliance, must pass [id]")
+    appliance_parser.add_argument('-dns',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="DNS server IP addresses and domain configurations from Edge Connect appliance, must pass [id]")
+
 
 ##############################################################################    
 #                            BGP COMMANDS
@@ -120,6 +128,31 @@ def parser():
                                   #action='store_true',
                                   help="appliance BGP neighbors current state, must pass [id]")
 
-
+##############################################################################    
+#                            FLOWS COMMANDS
+##############################################################################
+    flows_parser = subparsers.add_parser('flows',
+                                            parents=[parent_parser],
+                                            help="flows statistics on edge connect",
+                                            
+                                            description='''''')
+    flows_parser.add_argument('-id',
+                                  required=True,
+                                  metavar='(required)',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="provide appliance id")
+    flows_parser.add_argument('-active',
+                                  required=False,
+                                  #metavar='',
+                                  action='store_true',
+                                  #action='store_true',
+                                  help="shows active flows on appliance")
+    flows_parser.add_argument('-inactive',
+                                  required=False,
+                                  #metavar='',
+                                  action='store_true',
+                                  #action='store_true',
+                                  help="shows inactive flows on appliance")
     options = parser.parse_args()
     return options

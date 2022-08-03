@@ -74,3 +74,19 @@ class APPLIANCE(BaseConnection):
 
         except Exception as e:
             print(e)
+    def _get_appliance_dns(self,options):
+        ne_pk = f"{options.dns[0]}.NE"
+        try:
+            orch = Orchestrator(self.url, verify_ssl=True, api_key=self.token)
+            orch_return = orch.get_appliance_dns(ne_id=ne_pk, cached=False)
+            y = []
+            #print_dict(orch_return)
+            for u in orch_return.values():
+                for u in u.values():
+                    args = ['self','address','srcinf','vrf_id']
+                    x = create_dict(u,args)    
+                    y.append(x)
+            print(tabulate(y,headers='keys',tablefmt=tablefmt))
+
+        except Exception as e:
+            print(e)

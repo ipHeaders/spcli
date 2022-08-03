@@ -61,9 +61,10 @@ optional arguments:
   -v, --version         shows cli tool version
 
 Silvperpeak Commands:
-  {orch,appliance,bgp}
+  {orch,appliance,bgp,flows}
     orch                orchesrator commands
     appliance           edge connect appliance commands
     bgp                 edge connect bgp commands
+    flows               flows statistics on edge connect
 
 ```
