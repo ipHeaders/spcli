@@ -1,0 +1,22 @@
+name: Lint
+
+on:
+  push:
+    branches:    
+      - 'main'
+      - 'feature/**'
+  pull_request:
+    types: [opened, reopened,edited]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+    - uses: BSFishy/pip-action@v1
+      with:
+        requirements: requirements.txt
+        upgrade: true
+        editable: editable
+    - run: python main.py# <-- only one value is allowed
