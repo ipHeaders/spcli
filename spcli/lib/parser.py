@@ -91,6 +91,12 @@ def parser():
                                   nargs=1,
                                   #action='store_true',
                                   help="configured message of the day (motd) and issue banners for Edge Connect appliance, must pass [id]")
+    appliance_parser.add_argument('-dns',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="DNS server IP addresses and domain configurations from Edge Connect appliance, must pass [id]")
 
 ##############################################################################    
 #                            BGP COMMANDS

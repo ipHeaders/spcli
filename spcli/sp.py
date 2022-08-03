@@ -33,6 +33,8 @@ def main():
         lib.appliance.APPLIANCE()._get_appliance_software_version(options)
     elif (options.args == "appliance" and options.banner != None):
         lib.appliance.APPLIANCE()._get_appliance_login_banners(options)
+    elif (options.args == "appliance" and options.dns != None):
+        lib.appliance.APPLIANCE()._get_appliance_dns(options)
     elif (options.args == "appliance"):
         lib.appliance.APPLIANCE()._get_appliances(options)
 #########################################################################################    
