@@ -18,4 +18,4 @@ jobs:
       with:
         requirements: requirements.txt
         upgrade: true
-    - run: sp -v
+    - run: python spcli/sp.py -v # <-- only one value is allowed
