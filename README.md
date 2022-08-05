@@ -1,4 +1,9 @@
 # spcli 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Issues](https://img.shields.io/github/issues/ipHeaders/spcli)](https://img.shields.io/github/issues/ipHeaders/spcli)
+[![Issues](https://img.shields.io/github/v/tag/ipHeaders/spcli)](https://img.shields.io/github/v/tag/ipHeaders/spcli)
+[![publish-to-pypi 🐍 📦](https://github.com/ipHeaders/spcli/actions/workflows/publish-to-pypi.yml/badge.svg)](https://github.com/ipHeaders/spcli/actions/workflows/publish-to-pypi.yml)
+
 ## Silverpeak/Aruba SD-WAN Command Line Interface
 
 ### Description
