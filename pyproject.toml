@@ -1,7 +1,7 @@
 [project]
 name = "spcli"
 version = "0.0.7"
-entry-points = "dynamic"
+entry-points = ["dynamic"]
 authors = [
     {name = "Lazaro Mas", email="kentik.hanzo94@gmail.com"}
 ]
