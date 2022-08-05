@@ -28,7 +28,7 @@ dev = [
 ]
 
 [project.urls]
-homepage = "https://github.com/ipHeaders/spcli"@
+homepage = "https://github.com/ipHeaders/spcli"
 repository = "https://github.com/ipHeaders/spcli"
 
 [project.scripts]
