@@ -1,4 +1,7 @@
 # spcli 
+[![spcli](https://github.com/ipHeaders/spcli/actions/workflows/install_spcli.yml/badge.svg)](https://github.com/ipHeaders/spcli/actions/workflows/install_spcli.yml)
+[![publish-to-pypi 🐍 📦](https://github.com/ipHeaders/spcli/actions/workflows/publish-to-pypi.yml/badge.svg)](https://github.com/ipHeaders/spcli/actions/workflows/publish-to-pypi.yml)
+
 ## Silverpeak/Aruba SD-WAN Command Line Interface
 
 ### Description
