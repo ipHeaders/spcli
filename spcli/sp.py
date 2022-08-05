@@ -10,7 +10,7 @@ def main():
         print('debuging...options...',options)
     if (options.version == True):
         from importlib_metadata import version
-        print(f'version...installed:',version('sp'))
+        print(f'version...installed:',version('pyspcli'))
 
     if (options.args == "orch" and options.allowedip == True):
         lib.orch.ORCH()._get_ipAllowList()
