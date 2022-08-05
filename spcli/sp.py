@@ -53,5 +53,7 @@ def main():
         lib.flows.FLOWS()._get_appliance_flows_all(options)
     elif (options.args == "flows" and options.ip != None):
         lib.flows.FLOWS()._get_appliance_flows_ip(options)
+    elif (options.args == "flows" and options.port != None):
+        lib.flows.FLOWS()._get_appliance_flows_port(options)
 if __name__ == "__main__":
     main()

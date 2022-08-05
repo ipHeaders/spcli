@@ -67,26 +67,57 @@ class FLOWS(BaseConnection):
 
     def _get_appliance_flows_ip(self,options):
         ne_pk = f"{options.id[0]}.NE"
-        ip = options.ip
+        ip = options.ip[0]
         try:
             orch = Orchestrator(self.url, verify_ssl=True, api_key=self.token)
             orch_return = orch.get_appliance_flows(ne_id=ne_pk,ip1=ip,uptime="last5m")
             list_of_flows = []
-            for flow in orch_return['flows']:
-                flow_dict = {
-                    'Flow Id' : flow[0],
-                    'App Name' : flow[3],
-                    'Src IP' : flow[9],
-                    'Src Port' : flow[10],
-                    'Dst IP' : flow[16],
-                    'Dst Port' : flow[17],
-                    'Protocol' : flow[26],
-                    'OutTunnel' : flow[27],
-                    'InTunnel' : flow[28],
-                    'DSCP Class' : flow[31],
+            #print(orch_return['flows'])
+            if len(orch_return['flows']) >= 1:
+                for flow in orch_return['flows']:
+                    flow_dict = {
+                        'Flow Id' : flow[0],
+                        'App Name' : flow[3],
+                        'Src IP' : flow[9],
+                        'Src Port' : flow[10],
+                        'Dst IP' : flow[16],
+                        'Dst Port' : flow[17],
+                        'Protocol' : flow[26],
+                        'OutTunnel' : flow[27],
+                        'InTunnel' : flow[28],
+                        'DSCP Class' : flow[31],
+    
+                    }
+                    list_of_flows.append(flow_dict)
+                    
+            print(tabulate(list_of_flows,headers = "keys",tablefmt=tablefmt))
+        except Exception as e:
+            print(e)
 
-                }
-                list_of_flows.append(flow_dict)
+    def _get_appliance_flows_port(self,options):
+        ne_pk = f"{options.id[0]}.NE"
+        port = options.port[0]
+        try:
+            orch = Orchestrator(self.url, verify_ssl=True, api_key=self.token)
+            orch_return = orch.get_appliance_flows(ne_id=ne_pk, port1=port,uptime="last5m")
+            list_of_flows = []
+            if len(orch_return['flows']) >= 1:
+                #
+                for flow in orch_return['flows']:
+                    flow_dict = {
+                        'Flow Id' : flow[0],
+                        'App Name' : flow[3],
+                        'Src IP' : flow[9],
+                        'Src Port' : flow[10],
+                        'Dst IP' : flow[16],
+                        'Dst Port' : flow[17],
+                        'Protocol' : flow[26],
+                        'OutTunnel' : flow[27],
+                        'InTunnel' : flow[28],
+                        'DSCP Class' : flow[31],
+     
+                    }
+                    list_of_flows.append(flow_dict)
          
             print(tabulate(list_of_flows,headers = "keys",tablefmt=tablefmt))
         except Exception as e:
