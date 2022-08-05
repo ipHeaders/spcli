@@ -12,7 +12,7 @@ setup(
     version='0.0.7',
     py_modules=['sp'],
     setup_requires=["setuptools"],
-    install_requires=install_requires
+    install_requires=install_requires,
     packages=find_packages(where="spcli"),
     package_dir={"": "spcli"},
     include_package_data=True,
