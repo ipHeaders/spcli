@@ -11,7 +11,7 @@ requires-python = ">=3.7, <4"
 keywords = ["packaging", "dependency", "infer", "pyproject.toml"]
 
 classifiers = [
-    "Topic :: Silverpeak SD-WAN CLI"
+    "Topic :: Software Development"
 ]
 
 # Requirements: This is done differently by poetry!
