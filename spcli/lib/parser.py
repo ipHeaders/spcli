@@ -159,6 +159,12 @@ def parser():
                                   #action='store_true',
                                   nargs=1,
                                   help="shows flows on appliance for given port")
+    flows_parser.add_argument('-app',
+                                  required=False,
+                                  #metavar='',
+                                  #action='store_true',
+                                  nargs=1,
+                                  help="shows flows on appliance for given application")
     flows_parser.add_argument('-active',
                                   required=False,
                                   #metavar='',
