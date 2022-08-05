@@ -152,7 +152,7 @@ def parser():
                                   #metavar='',
                                   #action='store_true',
                                   nargs=1,
-                                  help="shows current flows on appliance for given ip")
+                                  help="shows flows on appliance for given ip")
     flows_parser.add_argument('-active',
                                   required=False,
                                   #metavar='',
