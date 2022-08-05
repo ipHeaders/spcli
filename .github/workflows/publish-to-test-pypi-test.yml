@@ -1,4 +1,4 @@
-name: publish-to-test-pypi 🐍 📦 
+name: publish-to-test-pypi-test 🐍 📦 
 
 on:
   push:
