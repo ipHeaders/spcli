@@ -165,6 +165,12 @@ def parser():
                                   #action='store_true',
                                   nargs=1,
                                   help="shows flows on appliance for given application")
+    flows_parser.add_argument('-dscp',
+                                  required=False,
+                                  #metavar='',
+                                  #action='store_true',
+                                  nargs=1,
+                                  help="shows flows on appliance for given dscp marking")
     flows_parser.add_argument('-active',
                                   required=False,
                                   #metavar='',
