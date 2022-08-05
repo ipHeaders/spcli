@@ -46,7 +46,7 @@ WARNING: The script sp is installed in '/Users/John/Library/Python/3.8/bin' whic
 
 Fix
 ```
-export PATH="$PATH:/Users/John/Library/Python/3.8/bin"
+export PATH='$PATH:/Users/John/Library/Python/3.8/bin'
 ```
 
 ### Help Function
