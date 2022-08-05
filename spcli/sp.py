@@ -49,5 +49,7 @@ def main():
         lib.flows.FLOWS()._get_appliance_flows_active(options)
     elif (options.args == "flows" and options.inactive == True):
         lib.flows.FLOWS()._get_appliance_flows_inactive(options)
+    elif (options.args == "flows" and options.all == True):
+        lib.flows.FLOWS()._get_appliance_flows_all(options)
 if __name__ == "__main__":
     main()

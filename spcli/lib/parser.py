@@ -142,17 +142,29 @@ def parser():
                                   nargs=1,
                                   #action='store_true',
                                   help="provide appliance id")
+    flows_parser.add_argument('-all',
+                                  required=False,
+                                  #metavar='',
+                                  action='store_true',
+                                  help="shows current flows on appliance")
+    flows_parser.add_argument('-ip',
+                                  required=False,
+                                  #metavar='',
+                                  #action='store_true',
+                                  nargs=1,
+                                  help="shows current flows on appliance for given ip")
     flows_parser.add_argument('-active',
                                   required=False,
                                   #metavar='',
                                   action='store_true',
                                   #action='store_true',
-                                  help="shows active flows on appliance")
+                                  help="shows active flows count on appliance")
     flows_parser.add_argument('-inactive',
                                   required=False,
                                   #metavar='',
                                   action='store_true',
                                   #action='store_true',
-                                  help="shows inactive flows on appliance")
+                                  help="shows inactive flows count on appliance")
+
     options = parser.parse_args()
     return options
