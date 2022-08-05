@@ -1,5 +1,5 @@
 [project]
-name = "spcli"
+name = "sp-cli"
 version = "0.0.7"
 authors = [
     {name = "Lazaro Mas", email="kentik.hanzo94@gmail.com"}
