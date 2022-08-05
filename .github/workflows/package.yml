@@ -1,0 +1,33 @@
+name: package 🐍 
+
+on:
+  push:
+    branches:    
+      - 'main'
+      - 'feature/**'
+  pull_request:
+    types: [reopened,edited]
+jobs:
+  build:
+    name: Build Python 🐍 application
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.9"
+    - name: Install pypa/build
+      run: >-
+        python -m
+        pip install
+        build
+        --user
+    - name: Build a binary wheel and a source tarball
+      run: >-
+        python -m
+        build
+        --sdist
+        --wheel
+        --outdir dist/
+        .
