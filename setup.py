@@ -9,7 +9,7 @@ install_requires = (here / 'requirements.txt').read_text(encoding='utf-8').split
 
 setup(
     name="pyspcli",
-    version='0.0.9',
+    version='0.1.0',
     py_modules=['sp'],
     setup_requires=["setuptools"],
     install_requires=install_requires,
