@@ -10,7 +10,11 @@ This CLI tool is to query the Silverpeal/Aruba SD-WAN orchestrator and output th
 * Python >=3.7
 * User with API KEY
 
-To get started, instal the CLI tool using the python3 package manager [pip]
+To get started, install the CLI tool from Pypi 
+
+`pip3 install pyspcli`
+
+or download it directly from github
 
 `pip3 install git+https://github.com/NetDevLazg/spcli.git`
 
