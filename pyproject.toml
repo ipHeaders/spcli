@@ -1,10 +1,11 @@
 [project]
-name = "sp"
+name = "spcli"
 version = "0.0.7"
+entry-points = "dynamic"
 authors = [
     {name = "Lazaro Mas", email="kentik.hanzo94@gmail.com"}
 ]
-license = {file = "LICENSE.txt"}
+license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.7, <4"
 
