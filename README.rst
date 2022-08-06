@@ -89,4 +89,19 @@ To check possible commands, use the `-h` flag after a command. for example::
         flows               flows statistics on edge connect
     
 
+Examples
+---------------
 
+Check devices::
+    #
+    sp appliance
+    +-------+---------------+----------------+-------------------+--------+------------------------+-----------------+-----------------+--------+
+    |  id   |     site      |       IP       |      serial       |  mode  |       hostName         | softwareVersion | systemBandwidth | haPeer |
+    +-------+---------------+----------------+-------------------+--------+------------------------+-----------------+-----------------+--------+
+    | 18.NE | aws-east-2    |  100.100.11.4  | 00-FF-BC-FF-3A-A6 | router | silverpeak-edge-01     |  9.0.6.2_90185  |     1000000     |        |
+    | 17.NE | aws-east-2    | 100.100.20.241 | 00-FF-BC-FF-3A-A7 | router | silverpeak-edge-02     |  9.0.6.2_90185  |     1000000     |        |
+    | 14.NE | aws-east-2    | 100.100.0.241  | 00-FF-BC-FF-38-52 | router | silverpeak-edge-03     |  9.0.6.2_90185  |     1000000     |        |
+    | 13.NE | aws-east-1    | 100.100.0.206  | 00-FF-BC-FF-38-54 | router | silverpeak-edge-04     |  9.0.6.2_90185  |     1000000     |        |
+    | 15.NE | aws-east-1    |  100.100.4.18  | 00-FF-BC-FF-38-53 | router | silverpeak-edge-05     |  9.0.6.2_90185  |     1000000     |        |
+    | 16.NE | aws-east-1    | 100.100.12.212 | 00-FF-BC-FF-3A-A5 | router | silverpeak-edge-06     |  9.0.6.2_90185  |     1000000     |        |
+    +-------+---------------+----------------+-------------------+--------+------------------------+-----------------+-----------------+--------+
