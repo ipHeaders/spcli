@@ -93,7 +93,6 @@ Examples
 ---------------
 
 Check devices::
-    #
     sp appliance
     +-------+---------------+----------------+-------------------+--------+------------------------+-----------------+-----------------+--------+
     |  id   |     site      |       IP       |      serial       |  mode  |       hostName         | softwareVersion | systemBandwidth | haPeer |
