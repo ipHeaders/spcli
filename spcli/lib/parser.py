@@ -74,6 +74,12 @@ def parser():
                                   metavar='',
                                   nargs=1,
                                   help="appliance information, must pass [id]")
+    appliance_parser.add_argument('-interfaces',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="interface configuration data for appliance, must pass [id]")
     appliance_parser.add_argument('-stat_config',
                                   required=False,
                                   #metavar='ID',

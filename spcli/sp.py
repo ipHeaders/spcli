@@ -27,6 +27,8 @@ def main():
 #########################################################################################
     elif (options.args == "appliance" and options.info != None):
         lib.appliance.APPLIANCE()._get_appliance_info(options)
+    elif (options.args == "appliance" and options.interfaces != None):
+        lib.appliance.APPLIANCE()._get_appliance_interface_state(options)
     elif (options.args == "appliance" and options.stat_config == True):
         lib.appliance.APPLIANCE()._get_appliance_stats_config()
     elif (options.args == "appliance" and options.os_version != None):
