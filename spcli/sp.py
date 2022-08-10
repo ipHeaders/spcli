@@ -59,5 +59,10 @@ def main():
         lib.flows.FLOWS()._get_appliance_flows_app(options)
     elif (options.args == "flows" and options.dscp != None):
         lib.flows.FLOWS()._get_appliance_flows_dscp(options)
+#########################################################################################  
+    elif (options.args == "qos" and options.inbound_shaper != None):
+        lib.qos.QOS()._get_appliance_inbound_shaper(options)
+
+
 if __name__ == "__main__":
     main()

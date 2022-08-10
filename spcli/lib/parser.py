@@ -184,5 +184,20 @@ def parser():
                                   #action='store_true',
                                   help="shows inactive flows count on appliance")
 
+##############################################################################    
+#                            QoS COMMANDS
+##############################################################################
+    qos_parser = subparsers.add_parser('qos',
+                                            parents=[parent_parser],
+                                            help="qos statistics on edge connect",
+                                            
+                                            description='''''')
+    qos_parser.add_argument('-inbound_shaper',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="inbound shaper settings from Edge Connect appliance, must pass [id]")
+
     options = parser.parse_args()
     return options

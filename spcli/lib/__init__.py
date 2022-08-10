@@ -3,3 +3,4 @@ from lib import appliance
 from lib import parser
 from lib import bgp
 from lib import flows
+from lib import qos
