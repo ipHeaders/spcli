@@ -27,6 +27,8 @@ def main():
 #########################################################################################
     elif (options.args == "appliance" and options.info != None):
         lib.appliance.APPLIANCE()._get_appliance_info(options)
+    elif (options.args == "appliance" and options.interfaces != None):
+        lib.appliance.APPLIANCE()._get_appliance_interface_state(options)
     elif (options.args == "appliance" and options.stat_config == True):
         lib.appliance.APPLIANCE()._get_appliance_stats_config()
     elif (options.args == "appliance" and options.os_version != None):
@@ -35,6 +37,8 @@ def main():
         lib.appliance.APPLIANCE()._get_appliance_login_banners(options)
     elif (options.args == "appliance" and options.dns != None):
         lib.appliance.APPLIANCE()._get_appliance_dns(options)
+    elif (options.args == "appliance" and options.syslog != None):
+        lib.appliance.APPLIANCE()._get_appliance_syslog_config(options)
     elif (options.args == "appliance"):
         lib.appliance.APPLIANCE()._get_appliances(options)
 #########################################################################################    
@@ -59,5 +63,10 @@ def main():
         lib.flows.FLOWS()._get_appliance_flows_app(options)
     elif (options.args == "flows" and options.dscp != None):
         lib.flows.FLOWS()._get_appliance_flows_dscp(options)
+#########################################################################################  
+    elif (options.args == "qos" and options.inbound_shaper != None):
+        lib.qos.QOS()._get_appliance_inbound_shaper(options)
+
+
 if __name__ == "__main__":
     main()

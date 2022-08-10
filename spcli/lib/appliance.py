@@ -90,3 +90,43 @@ class APPLIANCE(BaseConnection):
 
         except Exception as e:
             print(e)
+    def _get_appliance_interface_state(self,options):
+        ne_pk = f"{options.interfaces[0]}.NE"
+        try:
+            orch = Orchestrator(self.url, verify_ssl=True, api_key=self.token)
+            orch_return = orch.get_appliance_interface_state(ne_id=ne_pk, cached=False)
+            y = []
+            for u in orch_return['ifInfo']:
+                if u['ipv4'] != '' and u['ipv4dhcp'] == False:
+                    #
+                    args = ['ifname','admin','oper','ipv4','publicIp','ipv4mask','ipv4dhcp','ifSpeed','ifDuplex','mtu','wan-if']
+    
+                    x = create_dict(u,args)    
+                    y.append(x)
+                if u['ipv4dhcp'] == True:
+                    #
+                    args = ['ifname','admin','oper','ipv4','publicIp','ipv4mask','ipv4dhcp','ifSpeed','ifDuplex','mtu','wan-if']
+    
+                    x = create_dict(u,args)    
+                    y.append(x)
+            print(tabulate(y,headers='keys',tablefmt=tablefmt))
+
+        except Exception as e:
+            print(e)
+    def _get_appliance_syslog_config(self,options):
+        ne_pk = f"{options.syslog[0]}.NE"
+        try:
+            orch = Orchestrator(self.url, verify_ssl=True, api_key=self.token)
+            orch_return = orch.get_appliance_syslog_config(ne_id=ne_pk, cached=False)
+            y = []
+
+            for u in orch_return['remote']['elements']:
+                args = ['ip','self']
+                x = create_dict(u,args)    
+                y.append(x)
+            print(tabulate(orch_return['config']['members'].items(),headers='keys',tablefmt=tablefmt))
+            print(" ")
+            print(tabulate(y,headers='keys',tablefmt=tablefmt))
+
+        except Exception as e:
+            print(e)

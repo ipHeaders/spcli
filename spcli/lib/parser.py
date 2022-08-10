@@ -74,6 +74,12 @@ def parser():
                                   metavar='',
                                   nargs=1,
                                   help="appliance information, must pass [id]")
+    appliance_parser.add_argument('-interfaces',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="interface configuration data for appliance, must pass [id]")
     appliance_parser.add_argument('-stat_config',
                                   required=False,
                                   #metavar='ID',
@@ -98,6 +104,12 @@ def parser():
                                   nargs=1,
                                   #action='store_true',
                                   help="DNS server IP addresses and domain configurations from Edge Connect appliance, must pass [id]")
+    appliance_parser.add_argument('-syslog',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="logging settings from appliance or gmsdb, must pass [id]")
 
 
 ##############################################################################    
@@ -183,6 +195,21 @@ def parser():
                                   action='store_true',
                                   #action='store_true',
                                   help="shows inactive flows count on appliance")
+
+##############################################################################    
+#                            QoS COMMANDS
+##############################################################################
+    qos_parser = subparsers.add_parser('qos',
+                                            parents=[parent_parser],
+                                            help="qos statistics on edge connect",
+                                            
+                                            description='''''')
+    qos_parser.add_argument('-inbound_shaper',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="inbound shaper settings from Edge Connect appliance, must pass [id]")
 
     options = parser.parse_args()
     return options
