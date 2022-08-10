@@ -37,6 +37,8 @@ def main():
         lib.appliance.APPLIANCE()._get_appliance_login_banners(options)
     elif (options.args == "appliance" and options.dns != None):
         lib.appliance.APPLIANCE()._get_appliance_dns(options)
+    elif (options.args == "appliance" and options.syslog != None):
+        lib.appliance.APPLIANCE()._get_appliance_syslog_config(options)
     elif (options.args == "appliance"):
         lib.appliance.APPLIANCE()._get_appliances(options)
 #########################################################################################    
