@@ -211,5 +211,22 @@ def parser():
                                   #action='store_true',
                                   help="inbound shaper settings from Edge Connect appliance, must pass [id]")
 
+
+##############################################################################    
+#                            OSPF COMMANDS
+##############################################################################
+    ospf_parser = subparsers.add_parser('ospf',
+                                            parents=[parent_parser],
+                                            help="edge connect ospf commands",
+                                            
+                                            description='''''')
+
+    ospf_parser.add_argument('-config',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="appliance OSPF configuration, must pass [id]")
+
     options = parser.parse_args()
     return options
