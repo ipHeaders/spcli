@@ -70,6 +70,8 @@ def main():
 #########################################################################################  
     elif (options.args == "ospf" and options.config != None):
         lib.ospf.OSPF()._get_appliance_ospf_config(options)
+    elif (options.args == "ospf" and options.state != None):
+        lib.ospf.OSPF()._get_appliance_ospf_state(options)
 
 
 if __name__ == "__main__":

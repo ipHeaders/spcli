@@ -227,6 +227,12 @@ def parser():
                                   nargs=1,
                                   #action='store_true',
                                   help="appliance OSPF configuration, must pass [id]")
+    ospf_parser.add_argument('-state',
+                                  required=False,
+                                  metavar='',
+                                  nargs=1,
+                                  #action='store_true',
+                                  help="appliance OSPF interfaces state, must pass [id]")
 
     options = parser.parse_args()
     return options
