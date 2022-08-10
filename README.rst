@@ -87,6 +87,7 @@ To check possible commands, use the `-h` flag after a command. for example::
         appliance           edge connect appliance commands
         bgp                 edge connect bgp commands
         flows               flows statistics on edge connect
+        ospf                edge connect ospf commands
     
 
 Examples
