@@ -67,6 +67,12 @@ def main():
     elif (options.args == "qos" and options.inbound_shaper != None):
         lib.qos.QOS()._get_appliance_inbound_shaper(options)
 
+#########################################################################################  
+    elif (options.args == "ospf" and options.config != None):
+        lib.ospf.OSPF()._get_appliance_ospf_config(options)
+    elif (options.args == "ospf" and options.state != None):
+        lib.ospf.OSPF()._get_appliance_ospf_state(options)
+
 
 if __name__ == "__main__":
     main()
