@@ -12,7 +12,7 @@ spcli
    :target: https://github.com/ipHeaders/spcli/actions/workflows/publish-to-pypi.yml
 
 
-Silverpeak/Aruba SD-WAN Command Line Interface
+Silverpeak/Aruba SD-WAN Command Line Interface.
 This CLI tool is to query the Silverpeal/Aruba SD-WAN orchestrator and output the information in your terminal.
 
 
@@ -30,7 +30,7 @@ To get started, install the CLI tool from Pypi ::
 
 or download it directly from github::
 
-    pip3 install git+https://github.com/NetDevLazg/spcli.git
+    pip3 install git+https://github.com/ipHeaders/spcli.git
 
 Once the installation is successful, you will need to create a file with your api credentials.
 
